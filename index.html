@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Pintores y Mas</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="style.scss">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/fontawesome.css" integrity="sha256-NDeGOibnS4LwtQDi2e+nZtGespUCNpYegm5gyq7YH8c=" crossorigin="anonymous" />
+  
+  <script src="https://use.fontawesome.com/b1e2ae2259.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <!--<script type="text/javascript" src="/Collection/getpromoimages.js"></script>--> 
+  <script type="text/javascript" src="/Collection/getpromoimagespromise.js"></script> 
+  <script type="text/javascript" src="/Collection/getcartlines.js"></script>
+  <script type="text/javascript" src="/Collection/getorder.js"></script>
+
+  <script type="text/javascript" src="/Collection/lineprice.js"></script>
+  <script type="text/javascript" src="/Collection/removeline.js"></script>
+
+  <script type="text/javascript" src="/Views/tohome.js"></script> 
+  <script type="text/javascript" src="/Views/tocart.js"></script>
+  <script type="text/javascript" src="/Views/gotocheckout.js"></script>
+  <script type="text/javascript" src="/Views/backhome.js"></script> 
+
+  <script type="text/javascript" src="/Views/promoimagesview.js"></script>
+  <script type="text/javascript" src="/Views/cartlinesview.js"></script>
+  <script type="text/javascript" src="/Views/orderview.js"></script>
+  
+   
+  
+
+
+</head>
+
+<body onload="tohome()">
+  <section class="bloque1">
+    <nav class="navbar navbar-default navbar-fixed-top" style="padding-left: 15px; padding-right: 15px;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" id="home" onclick="backhome()" href="#">PINTORES Y MAS</a>
+        </div>
+    
+      <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="#catalog">HOME CATALOGUE</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#login">LOGIN</a></li>    
+            <li><a href="#" id="cart" onclick="tocart();"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+            </ul>
+       </div>
+   
+   
+      </div>
+    </nav>
+  </section>
+
+
+<section id="bloque2" style="margin-top: 70px;">
+  <div class="container-fluid ">
+    <form class="form-inline" style="display: flex;" action="/action_page.php">
+      <input class="form-control" type="text" style="width:50%;"placeholder="ITEM SEARCH">
+      <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-circle-arrow-right"></i>SEARCH</button>
+    </form>
+  </div>
+</section>
+
+      
+<section id="bloque4">
+
+      <div id="cart-header"></div> 
+      <div id="product-cart"></div> 
+      <div class ="row" id="buttons"></div>
+      
+</section>
+
+<section id="bloque3" class="show">
+  <div class="container text-center">  
+    <div class="row">
+      <div class="container">
+        <div id="promo">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ </br>
+
+ <section id="bloque5" class="hidden">
+    <div class="container">
+
+      <div class="row">
+            <h2>Checkout</h2>
+        </div>
+
+      <div class="row">
+            <h4>Shipping Information</h4>
+        </div>
+       
+        
+        <form action="/action_page.php">
+
+        <div class="row">
+          <div class="col-md-4">  
+            Name:<br>
+            <input type="text" name="Name" value="Ioa">
+            <br> 
+          </div>
+
+            <div class="col-md-4">  
+              Last name:<br>
+              <input type="text" name="Lastname" value="Rivas">
+              <br>  
+            </div>
+          
+            <div class="col-md-4">  
+                <p>Shipping method:</p>
+                <input type="radio" name="Shipping method" value="CorreoUy"> CorreoUy<br>
+                <input type="radio" name="Shipping method" value="Fedex"> Fedex<br>
+                <input type="radio" name="genderShipping method" value="DHL"> DHL<br>  
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">  
+                Address:<br>
+                <input type="text" name="Address" value="Maipu 2062 ap 101">
+                <br>  
+            </div>
+          </div>
+          <br> 
+          <div class="row">
+              <div class="col-md-12">  
+                 Zipcode:<br>
+                  <input type="text" name="Zipcode" value="11300">
+                  <br>  
+              </div>
+            </div>
+            <br> 
+          <div class="row">
+                <div class="col-md-12">  
+                   Additional Information:<br>
+                   <textarea name="message" rows="10" cols="30">Let us know!</textarea>
+                    <br>  
+                </div>
+             </div>
+            </br>
+          </br>
+      </div>
+
+  <div class="container">
+
+        <div class="row">
+          <h4>Payment Details</h4>
+        </div>
+    
+      <div class="row">
+            <div class="col-md-4"> 
+               <span> <p>Select your Card:</p> </span>       
+                <select name="creditcards">
+                    <option value="volvo">Oca Card</option>
+                    <option value="saab">Amex</option>
+                    <option value="fiat">Discover</option>
+                </select>
+            </div>
+    
+            <div class="col-md-4">  
+                    Credit Card Number:<br>
+                    <input type="number" name="Credit Card" value="Credit Card Number">
+                    <br>  
+            </div>
+
+            <div class="col-md-4">  
+                <button type="button" class="btn btn-primary" onclick="getorder()" style="margin-top: 15px">Place Order</button>
+            </div>
+       </div>
+    </div>
+
+
+ </section>
+
+<section id="bloque6">
+  
+  <div id="history"> </div> 
+
+  <div id="menu"> </div> 
+      
+  <div id="order"> </div>
+                
+</section>
+
+
+<section id="bloque7">  
+  <div class="footer">
+         
+          <p><span class="glyphicon glyphicon-map-marker"></span>MONTEVIDEO</p>
+          <p><span class="glyphicon glyphicon-phone"></span>PHONE: +598 99304810</p>
+          <p><span class="glyphicon glyphicon-envelope"></span>EMAIL: pintoresymas@mail.com</p>
+
+      <ul class="social-network social-circle">
+           <li><a href="https://www.facebook.com/1950labs/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+           <li><a href="https://www.linkedin.com/groups/149746/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+      </ul>				
+        
+  </div>
+ 
+</section>
+</body>
+</html>

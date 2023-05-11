@@ -1,7 +1,7 @@
 # Dev-House Ecommerce Sample Site
 
-This is a simple Ecommerce site made with Vanilla Javascript with no database connection. 
-The motivation behind this project was to participate in a free Open Dev House in Oracle Netsuite Uruguay 
+- This is a simple Ecommerce site made with Vanilla Javascript with no database connection. 
+- The motivation behind this project was to participate in a free Open Dev House in Oracle Netsuite Uruguay 
 
 ## Stack
 

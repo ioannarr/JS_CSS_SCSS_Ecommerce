@@ -18,7 +18,7 @@ The motivation behind this project was to participate in a free Open Dev House i
 - Javascript Promises
 
 
-** These where the basic steps I took and learnt from the experience while trying to solve errors on my own: ** 
+**These where the basic steps I took and learnt from the experience while trying to solve errors on my own:** 
 
 1. 1st: Check possible error using Identation,
 2. 2nd: Check Network Tab,
